@@ -104,14 +104,6 @@ renderRowVersionTable(
     apiReferenceUrl('index.html', getLatestStable())
 );
 
-// Next table row
-renderRowVersionTable(
-    'next-version-table-body',
-    'Next',
-    documentationUrl('next'),
-    apiReferenceUrl('index.html', 'Next')
-);
-
 const prevStableVersions = versions
     .filter((ver) => ver !== getLatestStable());
 
