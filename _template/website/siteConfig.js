@@ -28,16 +28,16 @@ const siteConfig = {
         { href: "https://www.gooddata.com/developers/cloud-native/doc/", label: "Docs & APIs" },
 
         // Main nav links
-        { href: "https://www.gooddata.com/developers/", label: "Developers" },
-        { href: "https://www.gooddata.com/developers/cloud-native/", label: "GoodData.CN" },
-        { href: "/gooddata-ui/", label: "GoodData.UI" },
-        { href: "https://www.gooddata.com/developers/cloud-native/doc/", label: "Docs & APIs" },
+        {href: 'https://university.gooddata.com/', label: 'University'},
+        {href: 'https://community.gooddata.com/', label: 'Community'},
+        {href: 'https://www.gooddata.com/docs/', label: 'Documentation'},
+        {href: 'https://support.gooddata.com/hc/en-us', label: 'Support'},
 
         // Secondary nav
         { href: `/gooddata-ui-apidocs/index.html`, label: docVersion.version },
         { href: "/gooddata-ui/docs/interactive_examples.html", label: "Code samples", external: true },
         { href: "https://github.com/gooddata/gooddata-ui-sdk/", label: "GitHub", external: true },
-    ],
+      ],
     onPageNav: "separate",
     users,
     /* path to images for header/footer */

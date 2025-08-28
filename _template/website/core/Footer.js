@@ -18,7 +18,7 @@ class Footer extends React.Component {
                         <ul className="nav-footer-links-list">
                             <li className="nav-footer-links-list-item">
                                 <a
-                                    href="https://developer.gooddata.com/"
+                                    href="https://www.gooddata.com/docs/"
                                     id="developer-footer-documentation"
                                     className="nav-footer-link"
                                 >
