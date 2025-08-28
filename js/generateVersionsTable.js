@@ -24,7 +24,7 @@ function apiReferenceUrl(doc, version) {
 function documentationUrl(version) {
     if (version === "next" || version === undefined) {
         return "https://www.gooddata.com/docs/gooddata-ui/latest/";
-    } else if (version.startsWith("9")) {
+    } else if (parseVersionToNumber(version) > parseVersionToNumber("8.12.0")) {
         var majorAndMinorVersion = version.split(".").slice(0, 2).join(".");
         return "https://www.gooddata.com/docs/gooddata-ui/" + majorAndMinorVersion + "/";
     } else if (version === "8.12.0") {
