@@ -25,7 +25,7 @@ const siteConfig = {
     headerLinks: [
         // Breadcrumbs links
         { href: "/gooddata-ui/", label: "GoodData.UI" },
-        { href: "https://www.gooddata.com/developers/cloud-native/doc/", label: "Docs & APIs" },
+        { href: "https://www.gooddata.com/docs/gooddata-ui/", label: "Docs & APIs" },
 
         // Main nav links
         {href: 'https://university.gooddata.com/', label: 'University'},
