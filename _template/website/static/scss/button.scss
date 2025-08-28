@@ -60,7 +60,7 @@
 }
 
 .button-link {
-    color: $gd-color-highlight;
+    color: $color-shocking-pink;
     text-decoration: underline;
 
     &,
@@ -74,12 +74,12 @@
     &:hover,
     &:focus,
     &:active {
-        color: #0084c9;
+        color: $gd-color-text;
     }
 }
 
 a {
-    color: $gd-color-highlight;
+    color: $color-shocking-pink;
     transition: all 0.2s;
 
     &:hover,
