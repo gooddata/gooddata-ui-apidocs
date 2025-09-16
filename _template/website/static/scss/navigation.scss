@@ -69,7 +69,7 @@ nav.toc {
 
                     &,
                     &.navItemActive {
-                        color: $gd-color-text;
+                        color: $gd-color-highlight;
                     }
 
                     &:hover,
@@ -191,6 +191,9 @@ nav.toc {
                 padding-bottom: 12px;
                 font-size: 12px;
                 line-height: 14px;
+                a.active {
+                    color: $gd-color-highlight !important;
+                }
             }
 
             ul {

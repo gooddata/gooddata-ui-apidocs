@@ -1,16 +1,5 @@
 .reactNavSearchWrapper {
-    @media #{$large-down} {
-        top: 15px;
-
-        &,
-        input#search_input_react {
-            max-width: calc(100vw - 280px);
-        }
-    }
-
-    @media #{$small-only} {
-        display: none;
-    }
+    display: none;
 
     input#search_input_react {
         width: 90px;
