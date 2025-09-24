@@ -170,7 +170,7 @@
                     display: none;
                 }
 
-                &[href="/gooddata-ui/"] {
+                &[href="https://www.gooddata.com/docs/"] {
                     .separateOnPageNav & {
                         border-bottom-color: $gd-color-dark;
 
@@ -286,12 +286,13 @@
                 }
             }
 
-            &:nth-child(1) a[href="/gooddata-ui/"],
-            &:nth-child(2) a[href="https://www.gooddata.com/docs/gooddata-ui/"]
+            &:nth-child(1) a[href="https://www.gooddata.com/docs/"],
+            &:nth-child(2) a[href="https://www.gooddata.com/docs/"],
+            &:nth-child(3) a[href="https://www.gooddata.com/docs/gooddata-ui/"],
+            &:nth-child(4) a[href="https://sdk.gooddata.com/gooddata-ui-apidocs/"]
             {
                 position: absolute;
                 top: 99px;
-                left: -273px;
                 height: 24px;
                 margin: 0;
                 padding: 0;
@@ -299,31 +300,58 @@
                 font-size: 14px;
                 font-weight: normal;
                 line-height: 24px;
-                color: $color-shocking-pink;
-
-                @media only screen and (min-width: 1400px) {
-                    left: 5px;
-                }
+                color: $color-deep-purple;
 
                 &:hover,
                 &:focus,
                 &:active {
                     text-decoration: underline;
                 }
+            }
 
-                &::before {
-                    content: "";
-                    display: inline-block;
-                    width: 24px;
-                    height: 24px;
-                    margin-right: 10px;
-                    background-image: url("../img/header/icon-gdui.svg");
-                    background-repeat: no-repeat;
-                    background-size: contain;
+            &:nth-child(1) a[href="https://www.gooddata.com/docs/"],
+            &:nth-child(2) a[href="https://www.gooddata.com/docs/"] {
+                left: -273px;
+
+                @media only screen and (min-width: 1400px) {
+                    left: 5px;
+                }
+
+
+            }
+
+            &:nth-child(2) a[href="https://www.gooddata.com/docs/"] {
+                &::after {
+                    content: "/";
+                    margin-left: 5px;
+                    color: $color-deep-purple;
+                    text-decoration: none;
                 }
             }
 
-            &:nth-child(1) a[href="/gooddata-ui/"] {
+            &:nth-child(3) a[href="https://www.gooddata.com/docs/gooddata-ui/"] {
+                left: -182px;
+
+                @media only screen and (min-width: 1400px) {
+                    left: 95px;
+                }
+
+                &::after {
+                    content: "/";
+                    margin-left: 5px;
+                    color: $color-deep-purple;
+                }
+            }
+
+            &:nth-child(4) a[href="https://sdk.gooddata.com/gooddata-ui-apidocs/"] {
+                left: -83px;
+
+                @media only screen and (min-width: 1400px) {
+                    left: 195px;
+                }
+            }
+
+            &:nth-child(1) a[href="https://www.gooddata.com/docs/"] {
                 .separateOnPageNav & {
                     display: none;
                 }
@@ -333,21 +361,11 @@
                 }
             }
 
-            &:nth-child(2) a[href="https://www.gooddata.com/docs/gooddata-ui/"]
+            &:nth-child(2) a[href="https://www.gooddata.com/docs/"],
+            &:nth-child(3) a[href="https://www.gooddata.com/docs/gooddata-ui/"],
+            &:nth-child(4) a[href="https://sdk.gooddata.com/gooddata-ui-apidocs/"]
             {
                 display: none;
-
-                &::after {
-                    content: "GoodData.UI";
-                    position: absolute;
-                    left: 100%;
-                    padding-left: 19px;
-                    color: $gd-color-state-blank;
-                    background-image: url("../img/header/chevron.svg");
-                    background-repeat: no-repeat;
-                    background-position: 6px 4px;
-                    pointer-events: none;
-                }
 
                 .separateOnPageNav & {
                     @media #{$large-up} {
