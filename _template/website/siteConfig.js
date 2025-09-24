@@ -24,8 +24,10 @@ const siteConfig = {
     projectName: "gooddata-ui-apidocs",
     headerLinks: [
         // Breadcrumbs links
-        { href: "/gooddata-ui/", label: "GoodData.UI" },
-        { href: "https://www.gooddata.com/docs/gooddata-ui/", label: "Docs & APIs" },
+        { href: "https://www.gooddata.com/docs/", label: "All Products" },
+        { href: "https://www.gooddata.com/docs/", label: "All Products" },
+        { href: "https://www.gooddata.com/docs/gooddata-ui/", label: "GoodData.UI" },
+        { href: "https://sdk.gooddata.com/gooddata-ui-apidocs/", label: "API Reference" },
 
         // Main nav links
         {href: 'https://university.gooddata.com/', label: 'University'},
