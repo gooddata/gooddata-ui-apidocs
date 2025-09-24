@@ -322,10 +322,10 @@
 
             &:nth-child(2) a[href="https://www.gooddata.com/docs/"] {
                 &::after {
+                    position: absolute;
                     content: "/";
-                    margin-left: 5px;
+                    left: 81px;
                     color: $color-deep-purple;
-                    text-decoration: none;
                 }
             }
 
@@ -337,8 +337,9 @@
                 }
 
                 &::after {
+                    position: absolute;
                     content: "/";
-                    margin-left: 5px;
+                    left: 90px;
                     color: $color-deep-purple;
                 }
             }
