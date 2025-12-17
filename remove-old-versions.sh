@@ -1,5 +1,5 @@
 #!/bin/bash
-VERSIONS=$(ls -d */ |grep v[\0-9] |grep -v v8 | sort -V)
+VERSIONS=$(ls -d */ |grep v[\0-9] |grep -v v8 | grep -v v9 | sort -V)
 echo "$VERSIONS"
 
 NUM_VERSIONS=$(echo "$VERSIONS" | wc -l)
