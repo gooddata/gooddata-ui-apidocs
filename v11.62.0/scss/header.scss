@@ -1,0 +1,482 @@
+.fixedHeaderContainer {
+    padding: 0;
+    background: $gd-color-white;
+
+    @media #{$large-up} {
+        height: 140px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 81px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-top: 1px solid rgba(0,0,0,.2);
+        border-bottom: 1px solid rgba(0,0,0,.2);
+        background-color: $color-mist-gray;
+
+        @media #{$large-down} {
+            display: none;
+        }
+    }
+
+    header img,
+    .logo {
+        width: 182px;
+        height: 40px;
+        margin-right: 0;
+    }
+
+    header {
+        height: 81px;
+        align-items: center;
+
+        &::before {
+            content: "Learn";
+            order: 1;
+            display: none;
+            align-self: center;
+            margin-left: 16px;
+            padding: 10px 16px;
+            border-left: 1px solid $color-dove-gray;
+            color: $color-deep-purple;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 1.25;
+
+            @media #{$large-up} {
+                display: block;
+            }
+
+            @media only screen and (min-width: 1400px) {
+                position: absolute;
+                left: 182px;
+            }
+        }
+
+        > a {
+            flex: 0 0 auto;
+
+            &:hover,
+            &:active,
+            &:focus {
+                h3 {
+                    text-decoration: underline;
+                }
+            }
+
+            &:first-child {
+                @media only screen and (min-width: 1400px) {
+                    position: absolute;
+                }
+            }
+        }
+
+        a {
+            .logo {
+                display: block;
+                opacity: 0.9;
+            }
+
+            &:hover .logo {
+                opacity: 1;
+            }
+        }
+
+        h2 {
+            display: none;
+        }
+
+        h3 {
+            position: absolute;
+            right: 0;
+            display: none;
+            margin: 0;
+            color: $gd-color-text;
+            font-family: $gdfont-regular;
+            font-weight: lighter;
+            font-size: 0.9rem;
+            text-decoration: none;
+
+            .separateOnPageNav & {
+                display: flex;
+            }
+
+            @media #{$large-up} {
+                top: 101px;
+                right: 471px;
+            }
+        }
+    }
+}
+
+.navigationSlider {
+    position: static;
+    flex: 1 1 auto;
+    order: 1;
+
+    .slidingNav {
+        padding: 0;
+
+        ul {
+            position: static;
+            background-color: transparent;
+
+            @media #{$large-down} {
+                display: flex;
+                align-items: flex-end;
+                width: auto;
+                height: 105px;
+                margin: 0 10px;
+            }
+
+            @media #{$large-up} {
+                justify-content: center;
+            }
+        }
+
+        ul li {
+            flex: 0 1 auto;
+            padding: 0;
+
+            a {
+                margin: 0;
+                padding: 20px 20px 16px;
+                border-bottom: 2px solid transparent;
+                color: transparentize($gd-color-dark, 0.3);
+                line-height: 24px;
+                font-size: 14px;
+                text-decoration: none;
+                font-weight: 700;
+                transition: all 0.2s;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $gd-color-dark;
+                    background-color: transparent;
+                }
+
+                &:hover,
+                &:focus,
+                &:active {
+                    border-color: $color-shocking-pink;
+                    background-color: transparent;
+                }
+
+                &:empty {
+                    display: none;
+                }
+
+                &[href="https://www.gooddata.com/docs/"] {
+                    .separateOnPageNav & {
+                        border-bottom-color: $gd-color-dark;
+
+                        @media #{$large-down} {
+                            color: $gd-color-dark;
+                        }
+                    }
+                }
+
+                &[href="https://www.gooddata.com/docs/"] {
+                    border-color: $color-shocking-pink;
+                }
+
+                @media #{$large-down} {
+                    height: 40px;
+                    padding: 0 0.5rem;
+                    line-height: 1.5rem;
+                }
+
+                @media #{$large-up} {
+                    height: 65px;
+                    line-height: 65px;
+                    border-bottom-width: 4px;
+
+                    &[href="https://university.gooddata.com/"],
+                    &[href="https://community.gooddata.com/"],
+                    &[href="https://www.gooddata.com/docs/"],
+                    &[href="https://support.gooddata.com/hc/en-us"] {
+                        height: 81px;
+                        margin: 0;
+                        padding: 20px 20px 16px;
+                        border-bottom: 3px solid transparent;
+                        line-height: 24px;
+                        font-size: 18px;
+                        font-weight: 600;
+                        text-decoration: none;
+                        transition: all 0.2s;
+
+                        &,
+                        &:hover,
+                        &:focus,
+                        &:active {
+                            color: $color-deep-purple;
+                        }
+
+                        &:hover,
+                        &:focus,
+                        &:active {
+                            border-color: $color-shocking-pink;
+                            background-color: transparent;
+                        }
+
+                        &:empty {
+                            display: none;
+                        }
+                    }
+
+                    &[href="https://www.gooddata.com/docs/"] {
+                        border-bottom: 3px solid $color-shocking-pink;
+                    }
+
+                    &[href*="https://github.com/"],
+                    &[href*="/gooddata-ui/docs/interactive_examples.html"] {
+                        position: absolute;
+                        top: 97px;
+                        right: 0;
+                        display: none;
+                        height: 1.75rem;
+                        margin: 0;
+                        padding: 5px 10px;
+                        border: 1px solid transparentize($gd-color-dark, 0.5);
+                        border-radius: 100px;
+                        color: $gd-color-dark;
+                        font-size: 0.75rem;
+                        font-weight: normal;
+                        line-height: 1.75rem;
+
+                        &:hover,
+                        &:focus,
+                        &:active {
+                            border-color: $gd-color-dark;
+                        }
+
+                        .separateOnPageNav & {
+                            display: flex;
+                        }
+                    }
+
+                    &[href*="https://github.com/"]
+                    {
+                        right: 0;
+                    }
+
+                    &[href*="/gooddata-ui/docs/interactive_examples.html"] {
+                        right: 75px;
+                    }
+
+                    &[href*="/gooddata-ui-apidocs/index.html"] {
+                        position: absolute;
+                        top: 92px;
+                        right: 170px;
+                        color: $gd-color-text;
+                        height: 1.75rem;
+                        line-height: 1.75rem;
+                        font-weight: normal;
+                        border-color: transparent;
+                        &:hover,
+                        &:focus,
+                        &:active {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(1) a[href="https://www.gooddata.com/docs/"],
+            &:nth-child(2) a[href="https://www.gooddata.com/docs/"],
+            &:nth-child(3) a[href="https://www.gooddata.com/docs/gooddata-ui/"],
+            &:nth-child(4) a[href="https://sdk.gooddata.com/gooddata-ui-apidocs/"]
+            {
+                position: absolute;
+                top: 99px;
+                height: 24px;
+                margin: 0;
+                padding: 0;
+                border: none;
+                font-size: 14px;
+                font-weight: normal;
+                line-height: 24px;
+                color: $color-deep-purple;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    text-decoration: underline;
+                }
+            }
+
+            &:nth-child(1) a[href="https://www.gooddata.com/docs/"],
+            &:nth-child(2) a[href="https://www.gooddata.com/docs/"] {
+                left: -273px;
+
+                @media only screen and (min-width: 1400px) {
+                    left: 5px;
+                }
+
+
+            }
+
+            &:nth-child(2) a[href="https://www.gooddata.com/docs/"] {
+                &::after {
+                    position: absolute;
+                    content: "/";
+                    left: 81px;
+                    color: $color-deep-purple;
+                }
+            }
+
+            &:nth-child(3) a[href="https://www.gooddata.com/docs/gooddata-ui/"] {
+                left: -182px;
+
+                @media only screen and (min-width: 1400px) {
+                    left: 95px;
+                }
+
+                &::after {
+                    position: absolute;
+                    content: "/";
+                    left: 90px;
+                    color: $color-deep-purple;
+                }
+            }
+
+            &:nth-child(4) a[href="https://sdk.gooddata.com/gooddata-ui-apidocs/"] {
+                left: -83px;
+
+                @media only screen and (min-width: 1400px) {
+                    left: 195px;
+                }
+            }
+
+            &:nth-child(1) a[href="https://www.gooddata.com/docs/"] {
+                .separateOnPageNav & {
+                    display: none;
+                }
+
+                @media #{$large-down} {
+                    display: none;
+                }
+            }
+
+            &:nth-child(2) a[href="https://www.gooddata.com/docs/"],
+            &:nth-child(3) a[href="https://www.gooddata.com/docs/gooddata-ui/"],
+            &:nth-child(4) a[href="https://sdk.gooddata.com/gooddata-ui-apidocs/"]
+            {
+                display: none;
+
+                .separateOnPageNav & {
+                    @media #{$large-up} {
+                        display: flex;
+                    }
+                }
+            }
+        }
+
+        .navSearchWrapper {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            right: 50px;
+            bottom: 0;
+            display: none;
+            width: auto;
+            justify-content: flex-start;
+            padding: 0 20px;
+
+            &::before,
+            &::after {
+                display: none;
+            }
+
+            .separateOnPageNav & {
+                display: flex;
+            }
+
+            @media #{$large-up} {
+                top: 171px;
+                right: 289px;
+            }
+
+            @media #{$large-down} {
+                top: -18px;
+                right: 0;
+                height: 65px;
+            }
+        }
+
+        @media #{$large-down} {
+            box-shadow: $shadow;
+            background: $gray-3;
+
+            .sideNavVisible & {
+                box-shadow: none;
+            }
+        }
+    }
+
+    nav.slidingNav {
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: auto;
+        left: 0;
+        background: $gray-3;
+
+        @media #{$large-up} {
+            background: none;
+            height: auto;
+            position: relative;
+            right: auto;
+            top: auto;
+            width: auto;
+        }
+    }
+
+    @media #{$large-up} {
+        overflow: visible;
+
+        &,
+        nav.slidingNav,
+        .nav-site {
+            height: 100%;
+        }
+    }
+}
+
+.navPusher {
+    display: flex;
+    flex-direction: column;
+    padding-top: 88px;
+
+    @media #{$large-up} {
+        padding-top: 124px;
+    }
+}
+
+h1,
+.mainContainer .wrapper .post h1,
+.mainContainer .wrapper .post h2,
+.mainContainer .wrapper .post h3 {
+    color: $gd-color-dark;
+}
+
+nav.toc .toggleNav .navGroup.navGroupActive {
+    background: rgba(230, 230, 230, 1);
+
+    h3 {
+        background: linear-gradient(to bottom, #1e2025 0%, #0a0d14 100%);
+    }
+}
+
+.hamburger-menu {
+    top: 0;
+
+    .docsSliderActive & {
+        top: 5px;
+    }
+}
